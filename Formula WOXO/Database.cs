@@ -11,8 +11,8 @@ namespace Formula_WOXO
                 Name = "Red Bull",
                 ConstructorName = "Red Bull Racing-Honda RBPT",
                 Entrant = "Oracle Red Bull Racing",
-                Chassis = "RB19",
-                PowerUnit = "Honda RBPTH001",
+                Chassis = " RB20",
+                PowerUnit = "Honda RBPT",
                 Country = "Austria",
                 Chief = "Christian Horner",
                 Color = "#3671c6",
@@ -24,8 +24,8 @@ namespace Formula_WOXO
                 Name = "Mercedes",
                 ConstructorName = "Mercedes",
                 Entrant = "Mercedes-AMG Petronas F1 Team",
-                Chassis = "F1 W14",
-                PowerUnit = "Mercedes-AMG F1 M14",
+                Chassis = "F1 W15",
+                PowerUnit = "Mercedes",
                 Country = "Germany",
                 Chief = "Toto Wolff",
                 Color = "#6cd3bf",
@@ -37,8 +37,8 @@ namespace Formula_WOXO
                 Name = "Ferrari",
                 ConstructorName = "Scuderia Ferrari",
                 Entrant = "Ferrari",
-                Chassis = "SF-23",
-                PowerUnit = "Ferrari 066/10",
+                Chassis = "SF-24",
+                PowerUnit = "Ferrari",
                 Country = "Italy",
                 Chief = "Frédéric Vasseur",
                 Color = "#f91536",
@@ -49,8 +49,8 @@ namespace Formula_WOXO
                 Name = "McLaren",
                 ConstructorName = "McLaren-Mercedes",
                 Entrant = "McLaren F1 Team",
-                Chassis = "MCL60",
-                PowerUnit = "Mercedes-AMG F1 M14",
+                Chassis = "MCL38",
+                PowerUnit = "Mercedes",
                 Country = "United Kingdom",
                 Chief = "Andrea Stella",
                 Color = "#f58020",
@@ -60,9 +60,9 @@ namespace Formula_WOXO
             new Constructor {
                 Name = "Aston Martin",
                 ConstructorName = "Aston Martin Aramco-Mercedes",
-                Entrant = "Aston Martin Aramco Cognizant F1 Team",
-                Chassis = "AMR23",
-                PowerUnit = "Mercedes-AMG F1 M14",
+                Entrant = "Aston Martin Aramco F1 Team",
+                Chassis = "AMR24",
+                PowerUnit = "Mercedes",
                 Country = "United Kingdom",
                 Chief = "Mike Krack",
                 Color = "#358c75",
@@ -73,8 +73,8 @@ namespace Formula_WOXO
                 Name = "Alpine",
                 ConstructorName = "Alpine-Renault",
                 Entrant = "BWT Alpine F1 Team",
-                Chassis = "A523",
-                PowerUnit = "Renault E-Tech RE23",
+                Chassis = "A524",
+                PowerUnit = "Renault",
                 Country = "France",
                 Chief = "Bruno Famin",
                 Color = "#2293d1",
@@ -85,8 +85,8 @@ namespace Formula_WOXO
                 Name = "Williams",
                 ConstructorName = "Williams-Mercedes",
                 Entrant = "Williams Racing",
-                Chassis = "FW45",
-                PowerUnit = "Mercedes-AMG F1 M14",
+                Chassis = "FW46",
+                PowerUnit = "Mercedes",
                 Country = "United Kingdom",
                 Chief = "James Vowles",
                 Color = "#37bedd",
@@ -94,42 +94,43 @@ namespace Formula_WOXO
                 Icon = 'ᴡ', WorldChampionships = 9
             },
             new Constructor {
-                Name = "AlphaTauri",
-                ConstructorName = "AlphaTauri-Honda RBPT",
-                Entrant = "Scuderia AlphaTauri",
+                Name = "RB",
+                ConstructorName = "RB-Honda RBPT",
+                Entrant = "Visa Cash App RB F1 Team",
                 Chassis = "AT04",
-                PowerUnit = "Honda RBPTH001",
+                PowerUnit = "Honda RBPT",
                 Country = "Italy",
-                Chief = "Franz Tost",
+                Chief = "Laurent Mekies",
                 Color = "#5e8faa",
                 Color2 = "#5e8faa",
                 Icon = '∞', WorldChampionships = 0
             },
             new Constructor {
-                Name = "Alfa Romeo",
-                ConstructorName = "Alfa Romeo-Ferrari",
-                Entrant = "Alfa Romeo F1 Team Stake",
-                Chassis = "C43",
-                PowerUnit = "Ferrari 066/10",
+                Name = "Sauber",
+                ConstructorName = "Kick Sauber-Ferrariv",
+                Entrant = "Stake F1 Team Kick Sauber",
+                Chassis = "C44",
+                PowerUnit = "Ferrari",
                 Country = "Switzerland",
                 Chief = "Alessandro Alunni Bravi",
-                Color = "#c92d4b",
-                Color2 = "#c92d4b",
+                Color = "#00E701",
+                Color2 = "#00E701",
                 Icon = '●', WorldChampionships = 0
             },
             new Constructor {
                 Name = "Haas",
                 ConstructorName = "Haas-Ferrari",
                 Entrant = "MoneyGram Haas F1 Team",
-                Chassis = "VF-23",
-                PowerUnit = "Ferrari 066/10",
+                Chassis = "VF-24",
+                PowerUnit = "Ferrari",
                 Country = "United States",
-                Chief = "Guenther Steiner",
+                Chief = "Ayao Komatsu",
                 Color = "#b6babd",
                 Color2 = "#df0613",
                 Icon = '○', WorldChampionships = 0
             }
         };
+
         public static List<Driver> Drivers = new()
         {
             new Driver {
@@ -141,8 +142,8 @@ namespace Formula_WOXO
                 Age = 26,
                 DateOfBirth = new DateTime(1997, 9, 30),
                 Team = Constructors[0],
-                Rating = new DriverRatings(86, 98, 89, 98),
-                Stats = new DriverStats(95, 2502.5, 182, 3, 1, new KeyValuePair<short, short> (1, 51))
+                Rating = new DriverRatings(86, 92, 86, 94),
+                Stats = new DriverStats(98, 2586.5, 185, 3, 1, new KeyValuePair<short, short> (1, 54))
             },
             new Driver {
                 FirstName = "Sergio",
@@ -153,8 +154,8 @@ namespace Formula_WOXO
                 Age = 33,
                 DateOfBirth = new DateTime(1990, 1, 26),
                 Team = Constructors[0],
-                Rating = new DriverRatings(92, 94, 85, 87),
-                Stats = new DriverStats(34, 1441, 255, 0, 1, new KeyValuePair<short, short> (1, 6))
+                Rating = new DriverRatings(91, 88, 84, 84),
+                Stats = new DriverStats(35, 1486, 258, 0, 1, new KeyValuePair<short, short> (1, 6))
             },
             new Driver {
                 FirstName = "Lewis",
@@ -165,8 +166,8 @@ namespace Formula_WOXO
                 Age = 38,
                 DateOfBirth = new DateTime(1985, 1, 7),
                 Team = Constructors[1],
-                Rating = new DriverRatings(98, 94, 84, 92),
-                Stats = new DriverStats(197, 4625.5, 329, 7, 1, new KeyValuePair<short, short> (1, 103))
+                Rating = new DriverRatings(97, 91, 88, 86),
+                Stats = new DriverStats(197, 4639.5, 332, 7, 1, new KeyValuePair<short, short> (1, 103))
             },
             new Driver {
                 FirstName = "George",
@@ -177,8 +178,8 @@ namespace Formula_WOXO
                 Age = 25,
                 DateOfBirth = new DateTime(1998, 2, 15),
                 Team = Constructors[1],
-                Rating = new DriverRatings(77, 88, 80, 90),
-                Stats = new DriverStats(10, 454, 103, 0, 1, new KeyValuePair<short, short> (1, 1))
+                Rating = new DriverRatings(79, 88, 80, 89),
+                Stats = new DriverStats(11, 469, 104, 0, 1, new KeyValuePair<short, short> (1, 1))
             },
             new Driver {
                 FirstName = "Charles",
@@ -189,8 +190,8 @@ namespace Formula_WOXO
                 Age = 26,
                 DateOfBirth = new DateTime(1997, 10, 16),
                 Team = Constructors[2],
-                Rating = new DriverRatings(78, 92, 82, 95),
-                Stats = new DriverStats(28, 1034, 122, 0, 1, new KeyValuePair<short, short> (1, 5))
+                Rating = new DriverRatings(83, 92, 83, 93),
+                Stats = new DriverStats(30, 1074, 125, 0, 1, new KeyValuePair<short, short> (1, 5))
             },
             new Driver {
                 FirstName = "Carlos",
@@ -201,8 +202,8 @@ namespace Formula_WOXO
                 Age = 29,
                 DateOfBirth = new DateTime(1994, 9, 1),
                 Team = Constructors[2],
-                Rating = new DriverRatings(85, 92, 79, 89),
-                Stats = new DriverStats(18, 965.5, 182, 0, 1, new KeyValuePair<short, short> (1, 2))
+                Rating = new DriverRatings(86, 91, 81, 90),
+                Stats = new DriverStats(18, 982.5, 185, 0, 1, new KeyValuePair<short, short> (1, 2))
             },
             new Driver {
                 FirstName = "Lando",
@@ -213,8 +214,8 @@ namespace Formula_WOXO
                 Age = 23,
                 DateOfBirth = new DateTime(1999, 11, 13),
                 Team = Constructors[3],
-                Rating = new DriverRatings(77, 92, 79, 92),
-                Stats = new DriverStats(12, 597, 101, 0, 1, new KeyValuePair<short, short> (2, 6))
+                Rating = new DriverRatings(81, 93, 84, 94),
+                Stats = new DriverStats(13, 633, 104, 0, 1, new KeyValuePair<short, short> (2, 7))
             },
             new Driver {
                 FirstName = "Oscar",
@@ -225,8 +226,8 @@ namespace Formula_WOXO
                 Age = 22,
                 DateOfBirth = new DateTime(2001, 4, 6),
                 Team = Constructors[3],
-                Rating = new DriverRatings(59, 84, 81, 87),
-                Stats = new DriverStats(2, 87, 19, 0, 2, new KeyValuePair<short, short> (2, 1))
+                Rating = new DriverRatings(74, 90, 85, 92),
+                Stats = new DriverStats(2, 97, 22, 0, 2, new KeyValuePair<short, short> (2, 1))
             },
             new Driver {
                 FirstName = "Fernando",
@@ -237,7 +238,7 @@ namespace Formula_WOXO
                 Age = 42,
                 DateOfBirth = new DateTime(1981, 7, 29),
                 Team = Constructors[4],
-                Rating = new DriverRatings(99, 93, 78, 93),
+                Rating = new DriverRatings(99, 84, 82, 82),
                 Stats = new DriverStats(105, 2244, 337, 2, 1, new KeyValuePair<short, short> (1, 32))
             },
             new Driver {
@@ -249,7 +250,7 @@ namespace Formula_WOXO
                 Age = 25,
                 DateOfBirth = new DateTime(1998, 10, 29),
                 Team = Constructors[4],
-                Rating = new DriverRatings(80, 89, 77, 82),
+                Rating = new DriverRatings(80, 83, 77, 82),
                 Stats = new DriverStats(3, 247, 140, 0, 1, new KeyValuePair<short, short> (3, 3))
             },
             new Driver {
@@ -261,7 +262,7 @@ namespace Formula_WOXO
                 Age = 27,
                 DateOfBirth = new DateTime(1996, 2, 7),
                 Team = Constructors[5],
-                Rating = new DriverRatings(79, 89, 76, 87),
+                Rating = new DriverRatings(79, 83, 75, 84),
                 Stats = new DriverStats(4, 388, 127, 0, 2, new KeyValuePair<short, short> (1, 1))
             },
             new Driver {
@@ -273,7 +274,7 @@ namespace Formula_WOXO
                 Age = 27,
                 DateOfBirth = new DateTime(1996, 1, 17),
                 Team = Constructors[5],
-                Rating = new DriverRatings(79, 90, 76, 84),
+                Rating = new DriverRatings(80, 84, 74, 83),
                 Stats = new DriverStats(3, 409, 130, 0, 3, new KeyValuePair<short, short> (1, 1))
             },
             new Driver {
@@ -285,7 +286,7 @@ namespace Formula_WOXO
                 Age = 27,
                 DateOfBirth = new DateTime(1996, 3, 23),
                 Team = Constructors[6],
-                Rating = new DriverRatings(85, 91, 85, 86),
+                Rating = new DriverRatings(81, 81, 80, 82),
                 Stats = new DriverStats(2, 228, 78, 0, 4, new KeyValuePair<short, short> (3, 2))
             },
             new Driver {
@@ -297,7 +298,7 @@ namespace Formula_WOXO
                 Age = 22,
                 DateOfBirth = new DateTime(2000, 12, 31),
                 Team = Constructors[6],
-                Rating = new DriverRatings(59, 73, 74, 75),
+                Rating = new DriverRatings(61, 73, 76, 75),
                 Stats = new DriverStats(0, 1, 19, 0, 10, new KeyValuePair<short, short> (10, 1))
             },
             new Driver {
@@ -309,7 +310,7 @@ namespace Formula_WOXO
                 Age = 23,
                 DateOfBirth = new DateTime(2000, 5, 11),
                 Team = Constructors[7],
-                Rating = new DriverRatings(71, 80, 74, 86),
+                Rating = new DriverRatings(74, 85, 75, 86),
                 Stats = new DriverStats(0, 52, 63, 0, 7, new KeyValuePair<short, short> (4, 1))
             },
             new Driver {
@@ -321,7 +322,7 @@ namespace Formula_WOXO
                 Age = 34,
                 DateOfBirth = new DateTime(1989, 7, 1),
                 Team = Constructors[7],
-                Rating = new DriverRatings(89, 83, 80, 82),
+                Rating = new DriverRatings(89, 82, 80, 81),
                 Stats = new DriverStats(32, 1317, 236, 0, 1, new KeyValuePair<short, short> (1, 8))
             },
             new Driver {
@@ -333,7 +334,7 @@ namespace Formula_WOXO
                 Age = 34,
                 DateOfBirth = new DateTime(1989, 8, 28),
                 Team = Constructors[8],
-                Rating = new DriverRatings(88, 83, 91, 82),
+                Rating = new DriverRatings(88, 80, 86, 77),
                 Stats = new DriverStats(67, 1797, 219, 0, 1, new KeyValuePair<short, short> (1, 10))
             },
             new Driver {
@@ -345,7 +346,7 @@ namespace Formula_WOXO
                 Age = 24,
                 DateOfBirth = new DateTime(1999, 5, 30),
                 Team = Constructors[8],
-                Rating = new DriverRatings(67, 81, 79, 80),
+                Rating = new DriverRatings(68, 76, 76, 73),
                 Stats = new DriverStats(0, 12, 41, 0, 5, new KeyValuePair<short, short> (8, 1)),
                 ReverseDisplayName = true
             },
@@ -358,7 +359,7 @@ namespace Formula_WOXO
                 Age = 31,
                 DateOfBirth = new DateTime(1992, 10, 5),
                 Team = Constructors[9],
-                Rating = new DriverRatings(82, 77, 80, 82),
+                Rating = new DriverRatings(82, 77, 78, 82),
                 Stats = new DriverStats(1, 186, 161, 0, 4, new KeyValuePair<short, short> (2, 1))
             },
             new Driver {
@@ -370,10 +371,11 @@ namespace Formula_WOXO
                 Age = 36,
                 DateOfBirth = new DateTime(1987, 8, 19),
                 Team = Constructors[9],
-                Rating = new DriverRatings(86, 80, 81, 83),
+                Rating = new DriverRatings(87, 81, 84, 86),
                 Stats = new DriverStats(0, 530, 203, 0, 1, new KeyValuePair<short, short> (4, 3))
             },
         };
+        
         public static Dictionary<string, string> SmallFlags = new()
         {
             { "BAHRAIN", FromHexBackground("#FFFFFF") + FromHex("#CE1126") + "▒██" + FromHexBackground("#000000")},
@@ -410,6 +412,7 @@ namespace Formula_WOXO
             { "THAILAND", FromHexBackground("#EF3340") + FromHex("#FFFFFF") + "■" + FromHex("#00247D") + "█" + FromHex("#FFFFFF") + "■" + FromHexBackground("#000000")},
             { "PORTUGAL", FromHexBackground("#046A38") +  FromHex("#FFE900") + "⁽" + FromHexBackground("#DA291C") + FromHex("#FFE900") + "⁾ " + FromHexBackground("#000000")},
         };
+
         public static List<GrandPrix> GrandsPrix = new()
         {
             new() {
@@ -427,11 +430,12 @@ namespace Formula_WOXO
                 DRSZones = 3,
                 Lenght = 5.412,
                 RaceDistance = 308.238,
+                TimeLenght = new TimeSpan(0, 1, 32)
             },
-            new GrandPrix {
+            new() {
                 Name = "Jeddah",
                 NameGP = "Saudi Arabian",
-                NameShort = "SA", 
+                NameShort = "SA",
                 Circuit = "Jeddah Corniche Circuit",
                 Country = "Saudi Arabia",
                 Location = "Jeddah",
@@ -443,8 +447,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 6.175,
                 RaceDistance = 308.750,
+                TimeLenght = new TimeSpan(0, 1, 31)
             },
-            new GrandPrix {
+            new() {
                 Name = "Albert Park",
                 NameGP = "Australian",
                 NameShort = "Australian",
@@ -459,8 +464,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.303,
                 RaceDistance = 307.574,
+                TimeLenght = new TimeSpan(0, 1, 25)
             },
-            new GrandPrix {
+            new() {
                 Name = "Suzuka",
                 NameGP = "Japanese",
                 NameShort = "Japanese",
@@ -475,11 +481,12 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.807,
                 RaceDistance = 307.471,
+                TimeLenght = new TimeSpan(0, 1, 32)
             },
-            new GrandPrix {
+            new() {
                 Name = "Shanghai",
                 NameGP = "Chinese",
-                NameShort = "Chinese", 
+                NameShort = "Chinese",
                 Circuit = "Shanghai International Circuit",
                 Country = "China",
                 Location = "Shanghai",
@@ -491,8 +498,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.451,
                 RaceDistance = 305.066,
+                TimeLenght = new TimeSpan(0, 1, 33)
             },
-            new GrandPrix {
+            new() {
                 Name = "Miami",
                 NameGP = "Miami",
                 NameShort = "Miami",
@@ -507,11 +515,12 @@ namespace Formula_WOXO
                 DRSZones = 3,
                 Lenght = 5.412,
                 RaceDistance = 308.326,
+                TimeLenght = new TimeSpan(0, 1, 30)
             },
-            new GrandPrix {
+            new() {
                 Name = "Imola",
                 NameGP = "Emilia Romagna",
-                NameShort = "E. Romagna", 
+                NameShort = "E. Romagna",
                 Circuit = "Imola Circuit",
                 Country = "Italy",
                 Location = "Imola",
@@ -523,11 +532,12 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 4.909,
                 RaceDistance = 309.049,
+                TimeLenght = new TimeSpan(0, 1, 16)
             },
-            new GrandPrix {
+            new() {
                 Name = "Monaco",
                 NameGP = "Monaco",
-                NameShort = "Monaco", 
+                NameShort = "Monaco",
                 Circuit = "Circuit de Monaco",
                 Country = "Monaco",
                 Location = "Monte Carlo",
@@ -539,11 +549,12 @@ namespace Formula_WOXO
                 DRSZones = 1,
                 Lenght = 3.337,
                 RaceDistance = 260.286,
+                TimeLenght = new TimeSpan(0, 1, 14)
             },
-            new GrandPrix {
+            new() {
                 Name = "Gilles Villeneuve",
                 NameGP = "Canadian",
-                NameShort = "Canadian", 
+                NameShort = "Canadian",
                 Circuit = "Circuit Gilles Villeneuve",
                 Country = "Canada",
                 Location = "Montreal",
@@ -555,11 +566,12 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 4.361,
                 RaceDistance = 305.27,
+                TimeLenght = new TimeSpan(0, 1, 14)
             },
-            new GrandPrix {
+            new() {
                 Name = "Barcelona",
                 NameGP = "Spanish",
-                NameShort = "Spanish", 
+                NameShort = "Spanish",
                 Circuit = "Circuit de Barcelona-Catalunya",
                 Country = "Spain",
                 Location = "Montmeló",
@@ -571,11 +583,12 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 4.657,
                 RaceDistance = 307.236,
+                TimeLenght = new TimeSpan(0, 1, 17)
             },
-            new GrandPrix {
+            new() {
                 Name = "Red Bull Ring",
                 NameGP = "Austrian",
-                NameShort = "Austrian", 
+                NameShort = "Austrian",
                 Circuit = "Red Bull Ring",
                 Country = "Austria",
                 Location = "Spielberg",
@@ -587,11 +600,12 @@ namespace Formula_WOXO
                 DRSZones = 3,
                 Lenght = 4.318,
                 RaceDistance = 306.452,
+                TimeLenght = new TimeSpan(0, 1, 7)
             },
-            new GrandPrix {
+            new() {
                 Name = "Silverstone",
                 NameGP = "British",
-                NameShort = "British", 
+                NameShort = "British",
                 Circuit = "Silverstone Circuit",
                 Country = "United Kingdom",
                 Location = "Silverstone",
@@ -603,11 +617,12 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.891,
                 RaceDistance = 306.198,
+                TimeLenght = new TimeSpan(0, 1, 28)
             },
-            new GrandPrix {
+            new() {
                 Name = "Hungaroring",
                 NameGP = "Hungarian",
-                NameShort = "Hungarian", 
+                NameShort = "Hungarian",
                 Circuit = "Hungaroring",
                 Country = "Hungary",
                 Location = "Mogyoród",
@@ -619,8 +634,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 4.381,
                 RaceDistance = 306.630,
+                TimeLenght = new TimeSpan(0, 1, 18)
             },
-            new GrandPrix {
+            new() {
                 Name = "Spa-Francorchamps",
                 NameGP = "Belgian",
                 NameShort = "Belgian",
@@ -635,8 +651,9 @@ namespace Formula_WOXO
                 DRSZones = 1,
                 Lenght = 7.004,
                 RaceDistance = 308.052,
+                TimeLenght = new TimeSpan(0, 1, 47)
             },
-            new GrandPrix {
+            new() {
                 Name = "Zandvoort",
                 NameGP = "Dutch",
                 NameShort = "Dutch",
@@ -651,8 +668,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 4.259,
                 RaceDistance = 306.587,
+                TimeLenght = new TimeSpan(0, 1, 12)
             },
-            new GrandPrix {
+            new() {
                 Name = "Monza",
                 NameGP = "Italian",
                 NameShort = "Italian",
@@ -667,8 +685,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.793,
                 RaceDistance = 306.720,
+                TimeLenght = new TimeSpan(0, 1, 22)
             },
-            new GrandPrix {
+            new() {
                 Name = "Baku City",
                 NameGP = "Azerbaijan",
                 NameShort = "Azerbaijan",
@@ -683,8 +702,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 6.003,
                 RaceDistance = 306.049,
+                TimeLenght = new TimeSpan(0, 1, 44)
             },
-            new GrandPrix {
+            new() {
                 Name = "Marina Bay",
                 NameGP = "Singapore",
                 NameShort = "Singapore",
@@ -699,8 +719,9 @@ namespace Formula_WOXO
                 DRSZones = 3,
                 Lenght = 4.94,
                 RaceDistance = 306.143,
+                TimeLenght = new TimeSpan(0, 1, 37)
             },
-            new GrandPrix {
+            new() {
                 Name = "Circuit of the Americas",
                 NameGP = "United States",
                 NameShort = "US",
@@ -715,8 +736,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.513,
                 RaceDistance = 308.405,
+                TimeLenght = new TimeSpan(0, 1, 37)
             },
-            new GrandPrix {
+            new() {
                 Name = "Hermanos Rodriguez",
                 NameGP = "Mexico City",
                 NameShort = "Mexico C.",
@@ -731,8 +753,9 @@ namespace Formula_WOXO
                 DRSZones = 1,
                 Lenght = 4.304,
                 RaceDistance = 305.354,
+                TimeLenght = new TimeSpan(0, 1, 19)
             },
-            new GrandPrix {
+            new() {
                 Name = "Interlagos",
                 NameGP = "São Paulo",
                 NameShort = "São Paulo",
@@ -747,8 +770,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 4.309,
                 RaceDistance = 305.879,
+                TimeLenght = new TimeSpan(0, 1, 11)
             },
-            new GrandPrix {
+            new() {
                 Name = "Las Vegas Strip",
                 NameGP = "Las Vegas",
                 NameShort = "Las Vegas",
@@ -763,8 +787,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 6.201,
                 RaceDistance = 310.05,
+                TimeLenght = new TimeSpan(0, 1, 37)
             },
-            new GrandPrix {
+            new() {
                 Name = "Lusail",
                 NameGP = "Qatar",
                 NameShort = "Qatar",
@@ -779,8 +804,9 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.419,
                 RaceDistance = 308.611,
+                TimeLenght = new TimeSpan(0, 1, 25)
             },
-            new GrandPrix {
+            new() {
                 Name = "Yas Marina",
                 NameGP = "Abu Dhabi",
                 NameShort = "Abu Dhabi",
@@ -795,6 +821,7 @@ namespace Formula_WOXO
                 DRSZones = 2,
                 Lenght = 5.281,
                 RaceDistance = 306.183,
+                TimeLenght = new TimeSpan(0, 1, 27)
             }
         }; 
     }
@@ -852,6 +879,7 @@ namespace Formula_WOXO
         public int Turns { get; set; }
         public int FirstGP { get; set; }
         public double Lenght { get; set; }
+        public TimeSpan TimeLenght { get; set; }
         public double RaceDistance { get; set; }
         public string? LapRecord { get; set; }
     }

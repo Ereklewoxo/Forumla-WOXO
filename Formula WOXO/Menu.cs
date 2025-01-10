@@ -18,7 +18,24 @@ namespace Formula_WOXO
         public static void MainMenu(int x, int y)
         {
             int selected = 0;
-            List<string> mainMenuItems = new() { "Quick Race", "Career", "Settings", "Quit Game" };
+            List<List<string>> mainMenuItems = new() { 
+                new(){
+                " ╭─────╮ ╷     ╷  ╷  ╭─────╴ ╷    ╭      ╭─────╮ ╭─────╮ ╭─────╴ ┌─────╴",
+               @" │     │ │     │  │  │       ├────╯╮     ├────┬╯ ├─────┤ │       ├─────",
+               @" ╰─────┴ ╰─────╯  ╵  ╰─────╴ ╵     ╵     ╵    ╰  ╵     ╵ ╰─────╴ └─────╴" },
+                new() {
+                " ╭─────╴ ╭─────╮ ╭─────╮ ┌─────╴ ┌─────╴ ╭─────╮",
+                " │       ├─────┤ ├────┬┘ ├─────  ├─────  ├────┬┘",
+               @" ╰─────╴ ╵     ╵ ╵    ╰  └─────╴ └─────╴ ╵    ╰ " },
+                new() {
+                " ╭─────╴ ┌─────╴ ───┬─── ───┬───  ╷  ╭╮    ╷ ╭─────╴ ╭─────╴",
+               @" ╰─────╮ ├─────     │       │     │  │╰───╮│ │  ╶──┐ ╰─────╮",
+               @" ╶─────╯ └─────╴    ╵       ╵     ╵  ╵    ╰╯ ╰─────╯ ╶─────╯" }, 
+                new() {
+                " ┌─────╴ ╮    ╭   ╷  ───┬───     ╭─────╴ ╭─────╮ ╭──╮╭──╮ ┌─────╴",
+               @" ├─────  ╰────╮   │     │        |  ╶──┐ ├─────┤ │  ││  │ ├─────",
+               @" └─────╴ ╯    ╰   ╵     ╵        ╰─────╯ ╵     ╵ ╵  ╰╯  ╵ └─────╴" }};
+
             ConsoleKeyInfo key;
             var menuDrawLines = DrawMainMenu(selected, mainMenuItems);
 
@@ -26,7 +43,7 @@ namespace Formula_WOXO
             {
                 bool escape = false;
                 Console.Write(FromHex("#e10600"));
-                Graphics.DrawLogo(0, 5, 3, false);
+                Graphics.DrawF1Logo(0, 5, 3, false);
 
                 while (true)
                 {
@@ -65,13 +82,16 @@ namespace Formula_WOXO
                         subMenuItems[1] = "F1 My Team";
                     }
                     var subMenuDrawLines = DrawSubMenuSquares(selectedSubOption, subMenuItems);
+
                     for (int i = 0; i < subMenuDrawLines.Count; i++)
                     {
-                        Console.SetCursorPosition(x + 30, y + selected * 2 + i);
+                        Console.SetCursorPosition(x + 80, y + selected * 2 + i);
                         Console.WriteLine(subMenuDrawLines[i]);
                     }
+
                     if (escape is true)
                         break;
+
                     ClearKey();
                     key = Console.ReadKey(true);
                     if (key.Key is ConsoleKey.LeftArrow or ConsoleKey.RightArrow)
@@ -87,6 +107,7 @@ namespace Formula_WOXO
                         }
                         break;
                     }
+
                     Task.Delay(15).Wait();
                 };
 
@@ -110,11 +131,23 @@ namespace Formula_WOXO
                     ClearConsole();
                     if (selectedGP is -1)
                         continue;
+
+                    escape = true;
                 };
-                if (selected is 0 && selectedSubOption && escape)
+                while (selected is 0 && selectedSubOption && escape)
                 {
-                }
-                else if (selected is 1 && selectedSubOption && escape)
+                    int selectedGP = -1;
+
+                    selectedGP = ChooseGPMenu();
+                    ClearConsole();
+                    if (selectedGP is -1)
+                        break;
+
+                    Race.RaceHud(selectedGP);
+
+                    escape = true;
+                };
+                if (selected is 1 && selectedSubOption && escape)
                 {
                     CharacterCreationMenu();
                 }
@@ -161,7 +194,7 @@ namespace Formula_WOXO
                     $"{FromHexBackground("#aaaaaa")}                 {FromHexBackground("#000000")}";
             Console.Clear();
             Console.Write(FromHex("#e10600"));
-            Graphics.DrawLogo(0, 5, 3, false);
+            Graphics.DrawF1Logo(0, 5, 3, false);
             WriteAt(5, 9, "" +
             "┌─────────────────────┐\n" +
             "│ Create Your F1 Team │\n" +
@@ -316,7 +349,7 @@ namespace Formula_WOXO
                         $"████████████████";
             Console.Clear();
             Console.Write(FromHex("#e10600"));
-            Graphics.DrawLogo(0, 5, 3, false);
+            Graphics.DrawF1Logo(0, 5, 3, false);
 
             WriteAt(5, 9, "" +
                 "┌────────────────────┐\n" +
@@ -649,7 +682,7 @@ namespace Formula_WOXO
 
             Console.Clear();
             Console.Write(FromHex("#e10600"));
-            Graphics.DrawLogo(0, 5, 3, false);
+            Graphics.DrawF1Logo(0, 5, 3, false);
             Console.Write(FromHex("#eeeeee"));
 
             while (true)
@@ -709,7 +742,8 @@ namespace Formula_WOXO
         public static int ChooseDriverMenu(int team)
         {
             ConsoleKeyInfo key;
-            int selected = team * 2, xPos = 41;
+            int selected = team * 2, 
+                xPos = 41;
 
             StringBuilder box = new();
             box.AppendLine("╭─────────────────────────────────╮");
@@ -726,7 +760,7 @@ namespace Formula_WOXO
 
             Console.Clear();
             Console.Write(FromHex("#e10600"));
-            Graphics.DrawLogo(0, 5, 3, false);
+            Graphics.DrawF1Logo(0, 5, 3, false);
 
             Console.Write(FromHex(Database.Constructors[team].Color2));
             DrawTeamLogo(team, 7, 15);
@@ -763,6 +797,10 @@ namespace Formula_WOXO
                 color = selected % 2 is 1 ? FromHex("#e10600") : FromHex("#666666");
                 WriteAt(xPos + 42, 13, color + box);
                 WriteAt(xPos + 76, 14, color + boxLine);
+                color = selected % 2 is 0 ? FromHex("#ffffff") : FromHex("#aaaaaa");
+                WriteAt(xPos + 2, 23, color + DriverBestInfoBuilder(team * 2));
+                color = selected % 2 is 1 ? FromHex("#ffffff") : FromHex("#aaaaaa");
+                WriteAt(xPos + 44, 23, color + DriverBestInfoBuilder(team * 2 + 1));
 
                 ClearKey();
                 key = Console.ReadKey(true);
@@ -816,7 +854,6 @@ namespace Formula_WOXO
         {
             ConsoleKeyInfo key;
             int selected = 0, lastSelected = 1, onScreen = 16, scrollBase = 0;
-            bool scrollSide = true;
             string pickATeamBox =
                 "┌───────────────────┐\n" +
                 "│ Choose Grand Prix │\n" +
@@ -824,7 +861,7 @@ namespace Formula_WOXO
 
             Console.Clear();
             Console.Write(FromHex("#e10600"));
-            Graphics.DrawLogo(0, 5, 3, false);
+            Graphics.DrawF1Logo(0, 5, 3, false);
             WriteAt(6, 9, FromHex("#e10600") + pickATeamBox);
 
             while (true)
@@ -834,10 +871,10 @@ namespace Formula_WOXO
                     WriteAt(8, 14, "");
                     for (int i = scrollBase; i < Math.Min(Database.GrandsPrix.Count, scrollBase + onScreen); i++)
                     {
-                        string grandPrixName = selected == i ? FromHex("#e10600") + Database.GrandsPrix[i].NameGP + " Grand Prix          \n"
-                            : FromRgb(255 - Math.Max((selected - i) * 9, (selected - i) * -9),
+                        string grandPrixName = selected == i ? FromHex("#e10600") + Database.GrandsPrix[i].NameGP + FromHex("#555555") + " Grand Prix          \n"
+                            : FromRgb(255 - Math.Max((selected - i) * 10, (selected - i) * -10),
                                       255 - Math.Max((selected - i) * 10, (selected - i) * -10),
-                                      255 - Math.Max((selected - i) * 10, (selected - i) * -10)) + Database.GrandsPrix[i].NameGP + " Grand Prix          \n";
+                                      255 - Math.Max((selected - i) * 10, (selected - i) * -10)) + Database.GrandsPrix[i].NameGP + FromHex("#555555") + " Grand Prix          \n";
                         WriteAt(8, Console.CursorTop, grandPrixName);
                     }
 
@@ -845,15 +882,15 @@ namespace Formula_WOXO
                     DrawScrollBar(6, 14, Database.GrandsPrix.Count, onScreen, scrollBase, "#e10600");
 
                     //Circuit Map
-                    DrawCircuitMap(40, 14, lastSelected, "#000000");
-                    DrawCircuitMap(40, 14, selected, "#ffffff");
+                    DrawCircuitMap(38, 16, lastSelected, "#000000");
+                    DrawCircuitMap(38, 16, selected, "#ffffff");
 
                     //Header Name
                     WriteHeaderGPName(lastSelected, "#000000");
                     WriteHeaderGPName(selected, "#e10600");
 
-                    WriteGPData(80, 15, lastSelected, "#e10600", "#000000");
-                    WriteGPData(80, 15, selected, "#e10600", "#ffffff");
+                    WriteGPData(80, 14, lastSelected, "#cccccc", "#000000");
+                    WriteGPData(80, 14, selected, "#cccccc", "#ffffff");
                 }
 
                 lastSelected = selected;
@@ -881,7 +918,8 @@ namespace Formula_WOXO
         }
         private static void WriteGPData(int x, int y, int selected, string colorLables, string colorData)
         {
-            WriteAt(x, y, FromHex(colorLables) + "Country:\nLocation:\nFirst GP:\nLap Record:\n\nLaps:\nTurns:\nDRS Zones:\nLap Length:\nRace Distance:");
+            WriteAt(x, y, FromHex(colorLables) + "Country:\nLocation:\nFirst GP:\nLap Record:\nRecord Holder:\n\n\n\n" +
+                "________________________________________\n\n\nLaps:\nTurns:\nDRS Zones:\nLap Length:\nRace Distance:");
 
             var lapRecordData = Database.GrandsPrix[selected].LapRecord.Split(' ');
             string lapRecordTime = lapRecordData[0];
@@ -896,6 +934,12 @@ namespace Formula_WOXO
                 Database.GrandsPrix[selected].FirstGP.ToString(),
                 lapRecordTime,
                 lapRecordHolder.TrimEnd(),
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
                 Database.GrandsPrix[selected].Laps.ToString(),
                 Database.GrandsPrix[selected].Turns.ToString(),
                 Database.GrandsPrix[selected].DRSZones.ToString(),
@@ -913,38 +957,22 @@ namespace Formula_WOXO
                     WriteAt(Console.WindowWidth - data[i].Length - 2, y + i, data[i]);
             }
         }
-        public static List<List<string>> DrawMainMenu(int sel, List<string> menuItems)
+        public static List<List<string>> DrawMainMenu(int sel, List<List<string>> menuItems)
         {
-            sel = sel * 3 + 1;
-            string notSelected = FromHex("#aaaaaa"), selected = FromHex("#e10600");
+            string notSelected = FromHex("#F1f1f1"), selected = FromHex("#e80900");
             List<List<string>> frames = new();
-            List<string> processedMenuItems = new ();
-            List<string> optionsList = new();
-            foreach (var item in menuItems)
-            {
-                if (item.Length > 17)
-                    processedMenuItems.Add(item.Substring(0, 17));
-                else if (item.Length < 17)
-                    processedMenuItems.Add(item.PadRight(17, ' '));
-                else
-                    processedMenuItems.Add(item);
-            }
-            foreach (var item in processedMenuItems)
-            {
-                optionsList.Add( "┌───────────────────┐");
-                optionsList.Add($"│ {item           } │");
-                optionsList.Add( "╘═══════════════════╛");
-            }
-            for (int step = 0; step <= 3; step++)
+            for (int step = 0; step <= 4; step++)
             {
                 List<string> frame = new List<string>();
-                for (int i = 0; i < optionsList.Count; i++)
+                for (int i = 0; i < menuItems.Count; i++)
                 {
-                    string optionText = optionsList[i];
-                    optionText = sel == i || sel == i - 1 || sel == i + 1 
-                        ? selected + new string(' ', step) + optionsList[i] + "   "
-                        : optionText = notSelected + optionsList[i] + "   ";
-                    frame.Add(optionText);
+                    for (int j = 0; j < menuItems[i].Count; j++)
+                    {
+                        string optionText = sel == i
+                            ? selected + new string(' ', step) + menuItems[i][j] + "    "
+                            : optionText = notSelected + menuItems[i][j] + "    ";
+                        frame.Add(optionText);
+                    }
                 }
                 frames.Add(frame);
             }
@@ -1364,7 +1392,7 @@ namespace Formula_WOXO
         }
         public static void TeamColorTest(string colorOne, string colorTwo, char icon, string name)
         {
-            WriteAt(50, 14, FromHex("#aaaaaa") + $"Make sure your colors don't\nclash with other teams\n\n{FromHex(colorOne)}████████████████████\n");
+            WriteAt(50, 14, FromHex("#aaaaaa") + $"Make sure your colors don't\n   clash with other teams\n\n{FromHex(colorOne)}████████████████████\n");
             foreach (var team in Database.Constructors)
             {
                 WriteAt(Console.CursorLeft, Console.CursorTop, FromHex(team.Color) + "██");
